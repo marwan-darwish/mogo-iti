@@ -1,0 +1,35 @@
+%main-title {
+	position: relative;
+	& .sub-title {
+		color: $darkGrayColor;
+		font-family: 'KaushanScript-Regular';
+	}
+	& .title {
+		color: $darkGrayColor;
+		font-family: 'Montserrat-Bold';
+	}
+}
+%main-title::after {
+	content: '';
+	position: absolute;
+	left: 50%;
+	top: calc(100% + 15px);
+	width: 50px;
+	height: 2px;
+	background: #f38181;
+	transform: translateX(-50%);
+}
+
+%statis-cell {
+	& h2 {
+		font-family: 'Montserrat-Bold';
+		@include fontSize(64);
+	}
+	& p {
+		font-family: 'Montserrat-Regular';
+		padding: 0;
+		margin: 0;
+		@include fontSize(14);
+	}
+}
+
